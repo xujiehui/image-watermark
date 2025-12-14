@@ -1,0 +1,65 @@
+{
+  "name": "watermark-img",
+  "version": "1.0.0",
+  "description": "图片水印工具，支持文字和图片水印",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.esm.js",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "lint": "eslint src --ext .ts",
+    "format": "prettier --write \"src/**/*.{ts,js}\"",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "watermark",
+    "image",
+    "canvas",
+    "web",
+    "browser",
+    "图片水印",
+    "水印"
+  ],
+  "author": {
+    "name": "Endless",
+    "email": "xujh12@gmail.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xujiehui/image-watermark.git"
+  },
+  "bugs": {
+    "url": "https://github.com/xujiehui/image-watermark/issues"
+  },
+  "homepage": "https://github.com/xujiehui/image-watermark#readme",
+  "files": [
+    "dist",
+    "package.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-typescript": "^11.1.5",
+    "@types/node": "^20.10.0",
+    "eslint": "^8.55.0",
+    "prettier": "^3.1.1",
+    "rollup": "^3.29.5",
+    "tslib": "^2.8.1",
+    "typescript": "^5.3.3"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  }
+}
